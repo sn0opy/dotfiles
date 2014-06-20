@@ -1,0 +1,5 @@
+defbce on
+term screen-256color-bce
+encoding UTF-8
+defencoding utf8
+caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= %c"
