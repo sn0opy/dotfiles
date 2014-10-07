@@ -10,10 +10,10 @@ set ignorecase
 set smartcase
 set number
 set list
-set listchars=tab:▸\ ,eol:¬,trail:·
-set laststatus=2
+set listchars = tab:▸\ ,eol:¬,trail:·
+set laststatus = 2
 
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp += ~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
@@ -33,19 +33,18 @@ let g:airline_detect_whitespace = 1
 let g:airline_powerline_fonts = 0
 let g:airline_left_sep = ' '
 let g:airline_right_sep = ' '
-let g:airline_theme='wombat'
+let g:airline_theme = 'wombat'
 let g:hybrid_use_iTerm_colors = 1
 
 colorscheme hybrid
 
 set wildmenu
-set wildmode=list:full
+set wildmode = list:full
 
 vmap > >gv
 vmap < <gv
 nmap <C-h> :bprev<CR>
 nmap <C-l> :bnext<CR>
-
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

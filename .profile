@@ -3,6 +3,12 @@ source .git-prompt.sh
 
 [ -z "$PS1" ] && return
 
+tp() {
+	if [ -n "$1" ] ; then
+			curl -w "%{url_effective}\n" -L -s $URL -o /dev/null -F "file=@$1" http://paste.534f.de/add
+	fi
+}
+
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
