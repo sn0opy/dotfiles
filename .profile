@@ -20,3 +20,4 @@ export PS1='$(__git_ps1 "(%s) ")\[\033[1;35m\]\w\[\033[0m\]\$ '
 export PATH="/usr/local/sbin:$PATH"
 export EDITOR="vim"
 export GPG_TTY=$(tty)
+export LESS="-x4"
