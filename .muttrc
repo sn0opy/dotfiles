@@ -1,7 +1,8 @@
 set realname='Sascha'
 set hostname='534f.de'
+set user_agent=no
 
-## Colours for items in the index                                                                                                                                         
+## Colours for items in the index
 color index brightcyan black ~N
 color index brightred black ~O
 color index brightyellow black ~F
@@ -12,18 +13,18 @@ mono index bold ~F
 mono index bold ~T
 mono index bold ~D
 
-## Highlights inside the body of a message.                                                                                                                               
+## Highlights inside the body of a message.
 
-## URLs                                                                                                                                                                    
+## URLs
 color body brightgreen black "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
 color body brightgreen black "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
 mono body bold "(http|ftp|news|telnet|finger)://[^ \"\t\r\n]*"
 mono body bold "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"
 
-## Email addresses.                                                                                                                                                       
+## Email addresses
 color body brightgreen black "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
 
-## Header                                                                                                                                                                 
+## Header
 color header green black "^from:"
 color header green black "^to:"
 color header green black "^cc:"
@@ -55,7 +56,7 @@ color header yellow black "^X-Spam-Status:"
 color header yellow black "^X-SpamProbe:"
 color header red black "^X-SpamProbe: SPAM"
 
-## Coloring quoted text - coloring the first 7 levels:                                                                                                                    
+## Coloring quoted text - coloring the first 7 levels:
 color quoted cyan black
 color quoted1 yellow black
 color quoted2 red black
@@ -65,8 +66,9 @@ color quoted5 yellow black
 color quoted6 red black
 color quoted7 green black
 
-## Default color definitions                                                                                                                                              
-#color hdrdefault white green                                                                                                                                             
+## Default color definitions
+
+#color hdrdefault white green
 color signature brightmagenta black
 color indicator black cyan
 color attachment black green
@@ -78,10 +80,11 @@ color tree brightblue black
 color normal white black
 color tilde green black
 color bold brightyellow black
-#color underline magenta black                                                                                                                                            
+
+#color underline magenta black
 color markers brightcyan black
 
-## Colour definitions when on a mono screen                                                                                                                               
+## Colour definitions when on a mono screen
 mono bold bold
 mono underline underline
 mono indicator reverse
