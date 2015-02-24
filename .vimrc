@@ -53,6 +53,7 @@ vmap > >gv
 vmap < <gv
 nmap <C-h> :bprev<CR>
 nmap <C-l> :bnext<CR>
+nmap ,<space> :call StripTrailingWhitespaces()<CR>
 
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
@@ -60,5 +61,14 @@ inoremap {{     {
 inoremap {}     {}
 
 if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+function! StripTrailingWhitespaces()
+	let _s=@/
+	let l = line(".")
+	let c = col(".")
+	%s/\s\+$//e
+	let @/=_s
+	call cursor(l, c)
+endfunction
