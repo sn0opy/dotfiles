@@ -20,9 +20,7 @@ Plug 'scrooloose/syntastic'
 Plug 'w0ng/vim-hybrid'
 Plug 'chriskempson/base16-vim'
 Plug 'bling/vim-airline'
-Plug 'kchmck/vim-coffee-script'
 Plug 'airblade/vim-gitgutter'
-Plug 'Shougo/neocomplete'
 
 call plug#end()
 
@@ -54,11 +52,6 @@ vmap < <gv
 nmap <C-h> :bprev<CR>
 nmap <C-l> :bnext<CR>
 nmap ,<space> :call StripTrailingWhitespaces()<CR>
-
-inoremap {      {}<Left>
-inoremap {<CR>  {<CR>}<Esc>O
-inoremap {{     {
-inoremap {}     {}
 
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
