@@ -8,20 +8,19 @@ set noexpandtab
 set ignorecase
 set smartcase
 set number
+set noswf
 set list
 set listchars=tab:▸\ ,eol:¬,trail:·
 set laststatus=2
 
 call plug#begin('~/.vim/plugged')
-
-Plug 'gmarik/Vundle.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'w0ng/vim-hybrid'
 Plug 'chriskempson/base16-vim'
 Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
-
+Plug 'tpope/vim-sensible'
 call plug#end()
 
 filetype plugin indent on
@@ -29,8 +28,8 @@ filetype plugin indent on
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#enabled=1
 let g:airline_powerline_fonts=0
-let g:airline_left_sep=' '
-let g:airline_right_sep=' '
+let g:airline_left_sep=''
+let g:airline_right_sep=''
 let g:airline_theme='wombat'
 let g:hybrid_use_iTerm_colors = 1
 let g:neocomplete#enable_at_startup = 1

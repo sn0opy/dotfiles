@@ -21,3 +21,7 @@ export PATH="/usr/local/sbin:$PATH"
 export EDITOR="vim"
 export GPG_TTY=$(tty)
 export LESS="-x4"
+
+export HISTFILE=~/.bash_history
+export HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
