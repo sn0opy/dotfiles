@@ -1,6 +1,10 @@
 source .git-completion.sh
 source .git-prompt.sh
 
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+	. /etc/bash_completion
+fi
+
 [ -z "$PS1" ] && return
 
 tp() {
