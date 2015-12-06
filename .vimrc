@@ -36,6 +36,7 @@ let g:airline_theme='wombat'
 let g:hybrid_use_iTerm_colors = 1
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
+set background=dark
 colorscheme hybrid
 
 set wildmenu
