@@ -48,6 +48,8 @@ nmap <C-h> :bprev<CR>
 nmap <C-l> :bnext<CR>
 nmap ,<space> :call StripTrailingWhitespaces()<CR>
 
+autocmd BufNewFile,BufRead *.twig set filetype=html
+
 if executable('ag')
 	set grepprg=ag\ --nogroup\ --nocolor
 	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
