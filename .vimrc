@@ -32,6 +32,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
+colorscheme gruvbox
+
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#enabled=1
 let g:airline#extensions#whitespace#mixed_indent_algo = 1
@@ -41,16 +43,13 @@ let g:airline_right_sep=''
 let g:airline_theme='gruvbox'
 let g:syntastic_check_on_open=1
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
-colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
 
 vmap > >gv
 vmap < <gv
 nmap <C-h> :bprev<CR>
 nmap <C-l> :bnext<CR>
 nmap ,<space> :call StripTrailingWhitespaces()<CR>
-
-autocmd BufNewFile,BufRead *.twig set filetype=html
 
 if executable('ag')
 	set grepprg=ag\ --nogroup\ --nocolor
@@ -59,7 +58,8 @@ if executable('ag')
 endif
 
 if has("autocmd")
-	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+	autocmd BufNewFile,BufRead *.twig set filetype=html
 endif
 
 function! StripTrailingWhitespaces()
