@@ -8,24 +8,29 @@ set noexpandtab
 set ignorecase
 set smartcase
 set number
-set noswf
 set list
 set listchars=tab:▸\ ,eol:¬,trail:·
 set laststatus=2
-set fdm=marker
+set noswapfile
+set foldmethod=marker
+set wildmenu
+set wildmode=list:full
+set background=dark
+set scrolloff=2
+set smarttab
+set incsearch
+set statusline=%{fugitive#statusline()}
+set autoread
 
 call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
-Plug 'w0ng/vim-hybrid'
-Plug 'chriskempson/base16-vim'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'morhetz/gruvbox'
 call plug#end()
-
-filetype plugin indent on
 
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#whitespace#enabled=1
@@ -33,15 +38,11 @@ let g:airline#extensions#whitespace#mixed_indent_algo = 1
 let g:airline_powerline_fonts=0
 let g:airline_left_sep=''
 let g:airline_right_sep=''
-let g:airline_theme='wombat'
-let g:hybrid_use_iTerm_colors = 1
+let g:airline_theme='gruvbox'
+let g:syntastic_check_on_open=1
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
-set background=dark
-colorscheme hybrid
-
-set wildmenu
-set wildmode=list:full
+colorscheme gruvbox
 
 vmap > >gv
 vmap < <gv
