@@ -1,8 +1,8 @@
 syntax on
 set nocompatible
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set noautoindent
 set noexpandtab
 set ignorecase
@@ -21,6 +21,8 @@ set smarttab
 set incsearch
 set statusline=%{fugitive#statusline()}
 set autoread
+set cursorline
+set showmatch
 
 call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'

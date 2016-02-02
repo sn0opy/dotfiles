@@ -1,5 +1,8 @@
-source .git-completion.sh
-source .git-prompt.sh
+source ~/.git-completion.sh
+source ~/.git-prompt.sh
+source /etc/profile.d/fzf.bash
+source /etc/profile.d/fzf-extras.bash
+source /etc/profile.d/autojump.bash
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 	. /etc/bash_completion
@@ -30,3 +33,4 @@ export LESS="-x4"
 export HISTFILE=~/.bash_history
 export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
+
