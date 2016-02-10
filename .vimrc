@@ -23,6 +23,7 @@ set statusline=%{fugitive#statusline()}
 set autoread
 set cursorline
 set showmatch
+set ttyfast
 
 call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
@@ -32,6 +33,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'morhetz/gruvbox'
+Plug 'ajh17/vimcompletesme'
 call plug#end()
 
 colorscheme gruvbox
