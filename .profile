@@ -2,7 +2,7 @@
 [ -f ~/.git-prompt.sh ] && source ~/.git-prompt.sh
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 [ -f /etc/profile.d/fzf-extras.bash ] && source /etc/profile.d/fzf-extras.bash
-[ -f /etc/profile.d/autojump.bash] && source /etc/profile.d/autojump.bash
+[ -f /etc/profile.d/autojump.bash ] && source /etc/profile.d/autojump.bash
 
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 	. /etc/bash_completion

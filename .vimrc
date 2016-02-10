@@ -55,6 +55,7 @@ nmap <C-l> :bnext<CR>
 nmap <C-b> :Buffers<CR>
 nmap <C-p> :Files .<CR>
 nmap ,<space> :call StripTrailingWhitespaces()<CR>
+nmap :<CR> :History:<CR>
 
 if has("autocmd")
 	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
