@@ -50,12 +50,12 @@ let g:gruvbox_contrast_dark='hard'
 
 vmap > >gv
 vmap < <gv
-nmap <C-h> :bprev<CR>
-nmap <C-l> :bnext<CR>
-nmap <C-b> :Buffers<CR>
-nmap <C-p> :Files .<CR>
-nmap ,<space> :call StripTrailingWhitespaces()<CR>
-nmap :<CR> :History:<CR>
+nnoremap <C-h> :bprev<CR>
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-b> :Buffers<CR>
+nnoremap <C-p> :Files .<CR>
+nnoremap ,<space> :call StripTrailingWhitespaces()<CR>
+nnoremap q: :History:<CR>
 
 if has("autocmd")
 	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
