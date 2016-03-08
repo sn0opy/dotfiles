@@ -26,6 +26,7 @@ set ttyfast
 set laststatus=0
 set statusline+=%=
 set statusline+=%{SyntasticStatuslineFlag()}
+set mouse-=a
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'

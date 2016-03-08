@@ -21,6 +21,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 alias ta='tmux attach'
+alias vim='nvim'
 
 export PS1='$(__git_ps1 "(%s) ")\[\033[1;34m\]\w\[\033[0m\]\$ '
 
