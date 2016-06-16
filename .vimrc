@@ -47,6 +47,7 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:gruvbox_contrast_dark='hard'
+let $FZF_DEFAULT_COMMAND= 'ag -g ""'
 
 colorscheme sierra
 
