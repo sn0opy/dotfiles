@@ -10,7 +10,7 @@ set number
 set list
 set listchars=tab:▸\ ,eol:¬,trail:·
 set noswapfile
-set foldmethod=marker
+set foldmethod=syntax
 set wildmenu
 set wildmode=list:full
 set background=dark
