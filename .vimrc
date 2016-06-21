@@ -30,9 +30,6 @@ set mouse-=a
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'morhetz/gruvbox'
 Plug 'ajh17/vimcompletesme'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -45,8 +42,6 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=4
 let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
-let g:ctrlp_custom_ignore='\v[\/]\.(git|hg|svn)$'
-let g:gruvbox_contrast_dark='hard'
 let $FZF_DEFAULT_COMMAND='ag -g ""'
 let g:php_folding=1
 
