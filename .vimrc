@@ -1,4 +1,5 @@
 set nocompatible
+set ttyfast
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -8,20 +9,18 @@ set ignorecase
 set smartcase
 set number
 set list
-set listchars=tab:▸\ ,eol:¬,trail:·
+set listchars=tab:\ \ ,eol:¬,trail:·
 set noswapfile
 set foldmethod=syntax
 set wildmenu
 set wildmode=list:full
-set background=dark
-set scrolloff=2
+set scrolloff=5
 set smarttab
 set incsearch
-set statusline=%{fugitive#statusline()}
 set autoread
 set cursorline
 set showmatch
-set ttyfast
+set hlsearch
 set laststatus=0
 set statusline+=%=
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -34,9 +33,9 @@ Plug 'ajh17/vimcompletesme'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'alessandroyorba/sierra'
+Plug 'morhetz/gruvbox'
 call plug#end()
 
-let g:sierra_Midnight=1
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=4
@@ -45,7 +44,10 @@ let g:syntastic_check_on_open=1
 let $FZF_DEFAULT_COMMAND='ag -g ""'
 let g:php_folding=1
 
-colorscheme sierra
+colorscheme gruvbox
+set background=dark
+
+filetype plugin indent off
 
 vmap > >gv
 vmap < <gv
