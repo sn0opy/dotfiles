@@ -9,7 +9,7 @@ set ignorecase
 set smartcase
 set number
 set list
-set listchars=tab:\ \ ,eol:¬,trail:·
+set listchars=tab:\_\_,eol:¬,trail:·
 set noswapfile
 set foldmethod=syntax
 set wildmenu

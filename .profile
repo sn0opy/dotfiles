@@ -12,7 +12,7 @@ fi
 
 tp() {
 	if [ -n "$1" ] ; then
-			curl -w "%{url_effective}\n" -L -s $URL -o /dev/null -F "file=@$1" http://paste.534f.de/add
+		curl -w "%{url_effective}\n" -L -s $URL -o /dev/null -F "file=@$1" https://paste.534f.de/add
 	fi
 }
 
@@ -35,3 +35,4 @@ export HISTFILE=~/.bash_history
 export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 
+. "/home/sascha/.acme.sh/acme.sh.env"
