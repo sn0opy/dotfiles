@@ -11,7 +11,6 @@ set number
 set list
 set listchars=tab:\_\_,eol:¬,trail:·
 set noswapfile
-set foldmethod=syntax
 set wildmenu
 set wildmode=list:full
 set scrolloff=5
@@ -32,7 +31,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ajh17/vimcompletesme'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'alessandroyorba/sierra'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
@@ -42,7 +40,6 @@ let g:syntastic_loc_list_height=4
 let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
 let $FZF_DEFAULT_COMMAND='ag -g ""'
-let g:php_folding=1
 
 colorscheme gruvbox
 set background=dark
