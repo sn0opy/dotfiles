@@ -1,5 +1,3 @@
-set nocompatible
-set ttyfast
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -25,6 +23,14 @@ set statusline+=%=
 set statusline+=%{SyntasticStatuslineFlag()}
 set mouse-=a
 
+if has("nvim")
+	set termguicolors
+else
+	set nocompatible
+	set ttyfast
+	set guicolors
+endif
+
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
@@ -39,6 +45,12 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_loc_list_height=4
 let g:syntastic_check_on_wq=0
 let g:syntastic_check_on_open=1
+let g:netrw_liststyle=3
+let g:netrw_banner=0
+let g:netrw_browse_split=4
+let g:netrw_winsize=25
+let g:netrw_use_errorwindow=0
+let g:netrw_list_hide='^\.git/$'
 let $FZF_DEFAULT_COMMAND='ag -g ""'
 
 colorscheme gruvbox
@@ -58,6 +70,7 @@ nnoremap q: :History:<CR>
 if has("autocmd")
 	autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 	autocmd BufNewFile,BufRead *.twig set filetype=html
+	autocmd BufEnter * :syntax sync fromstart
 endif
 
 function! StripTrailingWhitespaces()
