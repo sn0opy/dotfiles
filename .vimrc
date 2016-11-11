@@ -23,22 +23,24 @@ set statusline+=%=
 set statusline+=%{SyntasticStatuslineFlag()}
 set mouse-=a
 
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/syntastic'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'morhetz/gruvbox'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+call plug#end()
+
 if has("nvim")
 	set termguicolors
 else
 	set nocompatible
 	set ttyfast
-	set guicolors
 endif
-
-call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/syntastic'
-Plug 'airblade/vim-gitgutter'
-Plug 'ajh17/vimcompletesme'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'morhetz/gruvbox'
-call plug#end()
 
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_auto_loc_list=1
@@ -56,7 +58,8 @@ let $FZF_DEFAULT_COMMAND='ag -g ""'
 colorscheme gruvbox
 set background=dark
 
-filetype plugin indent off
+filetype plugin on
+"filetype plugin indent off
 
 vmap > >gv
 vmap < <gv
