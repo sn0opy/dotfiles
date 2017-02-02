@@ -34,5 +34,3 @@ export LESS="-x4"
 export HISTFILE=~/.bash_history
 export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
-
-. "/home/sascha/.acme.sh/acme.sh.env"
