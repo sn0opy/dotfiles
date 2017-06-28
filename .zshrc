@@ -50,4 +50,6 @@ _fzf_compgen_path() {
 }
 export FZF_DEFAULT_OPTS='--color 16'
 
+source ~/.zsh/zsh-git-prompt/zshrc.sh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

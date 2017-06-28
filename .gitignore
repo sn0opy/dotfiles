@@ -13,3 +13,4 @@ Icon
 .Trashes
 histfile
 .vim/bundle/*
+.zsh/zsh-git-prompt
