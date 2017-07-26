@@ -22,6 +22,7 @@ set laststatus=0
 set statusline+=%=
 set statusline+=%{SyntasticStatuslineFlag()}
 set mouse-=a
+set backspace=indent,eol,start
 
 call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/syntastic'
