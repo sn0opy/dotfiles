@@ -8,3 +8,6 @@
 
 [push]
 	default = simple
+
+[format]
+	pretty = format:%h %Cblue%<(12,trunc)%ar%Creset %<(15,trunc)%an %Cgreen%s%Creset
