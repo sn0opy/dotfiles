@@ -1,6 +1,7 @@
 [user]
 	name = Sascha Ohms
 	email = sasch9r@gmail.com
+	signingkey = CC962DD6CF9E5226
 
 [core]
 	editor = vim
