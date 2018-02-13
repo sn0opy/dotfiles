@@ -38,16 +38,19 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[00;32m'
 
+
 # configuration files
 for file in ~/.zsh/*.zsh; do
     source $file
 done
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 _fzf_compgen_path() {
 	ag -g "" "$1"
 }
+
+# fzf options
+export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 export FZF_DEFAULT_OPTS='--color 16'
 
 source ~/.zsh/zsh-git-prompt/zshrc.sh

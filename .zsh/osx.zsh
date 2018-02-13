@@ -1,6 +1,7 @@
 if [[ "$OSTYPE" == darwin* ]]; then
 	export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
+	export PATH=$PATH:$HOME/composer/vendor/bin
 	export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
 	export PATH=$PATH:/usr/local/opt/ruby/bin
 
