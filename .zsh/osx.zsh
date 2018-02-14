@@ -13,4 +13,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
 	alias ls="ls -G"
 	alias lt="ls -tcr"
 	alias llt="l -tcr"
+
+	if [ "$TMUX" = "" ]; then
+		tmux; 
+	fi
 fi
