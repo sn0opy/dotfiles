@@ -4,7 +4,7 @@ alias v='vim '
 alias ta='tmux attach'
 alias g='git '
 
-alias ls='ls'
+alias ls='ls --color=auto'
 alias l='ls -l'
 alias ll='l'
 alias lt='ls -tr'
