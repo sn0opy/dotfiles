@@ -19,18 +19,16 @@ set cursorline
 set showmatch
 set hlsearch
 set laststatus=0
-set statusline+=%=
-set statusline+=%{SyntasticStatuslineFlag()}
 set mouse-=a
 set backspace=indent,eol,start
 
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'valloric/MatchTagAlways'
+Plug 'w0rp/ale'
 call plug#end()
 
 if has("nvim")
@@ -40,11 +38,6 @@ else
 	set ttyfast
 endif
 
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_loc_list_height=4
-let g:syntastic_check_on_wq=0
-let g:syntastic_check_on_open=1
 let g:netrw_liststyle=3
 let g:netrw_banner=0
 let g:netrw_browse_split=4
@@ -57,7 +50,6 @@ colorscheme gruvbox
 set background=dark
 
 filetype plugin on
-"filetype plugin indent off
 
 vmap > >gv
 vmap < <gv
