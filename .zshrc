@@ -23,7 +23,6 @@ export HISTFILE HISTSIZE SAVEHIST
 # statistics
 REPORTTIME=10
 
-
 # env vars
 EDITOR=vim
 VISUAL=vim
@@ -52,7 +51,5 @@ _fzf_compgen_path() {
 # fzf options
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 export FZF_DEFAULT_OPTS='--color 16'
-
-source ~/.zsh/zsh-git-prompt/zshrc.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
