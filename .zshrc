@@ -48,6 +48,11 @@ _fzf_compgen_path() {
 	ag -g "" "$1"
 }
 
+if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+	ZSH_AUTOSUGGEST_USE_ASYNC=1
+fi
+
 # fzf options
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 export FZF_DEFAULT_OPTS='--color 16'
