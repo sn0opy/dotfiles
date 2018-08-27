@@ -14,3 +14,4 @@ Icon
 histfile
 .vim/bundle/*
 .zsh/zsh-git-prompt
+.zsh/cache
