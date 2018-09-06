@@ -29,6 +29,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'valloric/MatchTagAlways'
 Plug 'w0rp/ale'
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 if has("nvim")
