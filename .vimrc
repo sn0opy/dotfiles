@@ -30,7 +30,12 @@ Plug 'morhetz/gruvbox'
 Plug 'valloric/MatchTagAlways'
 Plug 'w0rp/ale'
 Plug 'wakatime/vim-wakatime'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 call plug#end()
+
+let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_min_num_identifier_candidate_chars = 4
+let g:ycm_enable_diagnostic_highlighting = 0
 
 if has("nvim")
 	set termguicolors
@@ -39,12 +44,6 @@ else
 	set ttyfast
 endif
 
-let g:netrw_liststyle=3
-let g:netrw_banner=0
-let g:netrw_browse_split=4
-let g:netrw_winsize=25
-let g:netrw_use_errorwindow=0
-let g:netrw_list_hide='^\.git/$'
 let $FZF_DEFAULT_COMMAND='ag -g ""'
 
 colorscheme gruvbox
