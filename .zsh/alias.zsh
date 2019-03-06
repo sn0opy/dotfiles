@@ -21,3 +21,4 @@ alias -g H="| head"
 alias mkdir='nocorrect mkdir'
 alias wget='nocorrect noglob wget'
 alias wgetc="wget --content-disposition"
+alias less="less -x2"
