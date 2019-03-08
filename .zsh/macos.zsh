@@ -1,15 +1,17 @@
 if [[ "$OSTYPE" == darwin* ]]; then
 	export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
-	export PATH=$PATH:$HOME/.composer/vendor/bin
+	export PATH=$HOME/.composer/vendor/bin:$PATH
 	export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
-	export PATH=$PATH:/usr/local/opt/ruby/bin
-	export PATH=$PATH:$HOME/go/bin
+	export PATH=$HOME/go/bin:$PATH
+	export PATH=$HOME/.fastlane/bin:$PATH
+	export PATH=/usr/local/opt/ruby/bin:$PATH
 
 	export LC_ALL="en_US.UTF-8"
 	export EDITOR="vim"
 	export VISUAL="vim"
 	export HOMEBREW_NO_ANALYTICS=1
+	export JAVA_HOME=`/usr/libexec/java_home`
 
 	alias ls="ls -G"
 	alias lt="ls -tcr"
