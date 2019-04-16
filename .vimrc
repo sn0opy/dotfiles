@@ -18,7 +18,7 @@ set autoread
 set cursorline
 set showmatch
 set hlsearch
-set laststatus=2
+set laststatus=0
 set mouse=nicr
 set backspace=indent,eol,start
 set foldmethod=indent
@@ -40,6 +40,7 @@ Plug 'ambv/black'
 Plug 'tmhedberg/SimpylFold'
 Plug 'Valloric/YouCompleteMe'
 Plug 'ap/vim-buftabline'
+Plug 'yuttie/comfortable-motion.vim'
 call plug#end()
 
 let g:SimpylFold_fold_docstring=0
@@ -48,7 +49,7 @@ let g:SimpylFold_docstring_preview=1
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_min_num_of_chars_for_completion=2
-let $FZF_DEFAULT_COMMAND='ag -g ""'
+let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 
 colorscheme gruvbox
 set background=dark
@@ -66,8 +67,8 @@ nnoremap q: :History:<CR>
 nnoremap <space> za
 
 if has("autocmd")
+  autocmd BufWinEnter,Syntax * syn sync minlines=500 maxlines=500
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-  "autocmd BufEnter * :syntax sync fromstart
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 endif
