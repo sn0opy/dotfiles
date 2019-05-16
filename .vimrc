@@ -41,8 +41,10 @@ Plug 'tmhedberg/SimpylFold'
 Plug 'Valloric/YouCompleteMe'
 Plug 'ap/vim-buftabline'
 Plug 'yuttie/comfortable-motion.vim'
+Plug 'chaoren/vim-wordmotion'
 call plug#end()
 
+let g:gitgutter_map_keys=0
 let g:SimpylFold_fold_docstring=0
 let g:SimpylFold_fold_import=0
 let g:SimpylFold_docstring_preview=1
