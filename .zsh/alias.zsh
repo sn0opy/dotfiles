@@ -1,6 +1,7 @@
-#alias sudo='sudo '
+alias sudo='sudo '
 alias s='sudo '
 alias v='vim '
+alias vim="nvim"
 alias ta='tmux attach'
 alias g='git '
 

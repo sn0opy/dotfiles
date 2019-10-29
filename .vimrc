@@ -1,8 +1,13 @@
+
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8
+set ttyfast
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set autoindent
 set expandtab
+set autoindent
 set ignorecase
 set smartcase
 set number
@@ -24,34 +29,37 @@ set backspace=indent,eol,start
 set foldmethod=indent
 set foldlevel=99
 set nocompatible
-set ttyfast
+set lazyredraw
+set completeopt=menu,menuone,noselect,longest,preview
+
+let g:gitgutter_map_keys = 0
+let g:black_fast = 1
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow'
+let g:gruvbox_contrast_dark = 'dark'
+let g:gruvbox_number_column = 'bg1'
+let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#completion_delay = 1
+let g:deoplete#enable_at_startup = 1
+let g:ale_completion_enabled = 0
+let g:python3_host_prog = '/usr/bin/python'
 
 call plug#begin('~/.vim/plugged')
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter' " Git status indicator
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'morhetz/gruvbox'
-Plug 'valloric/MatchTagAlways'
-Plug 'w0rp/ale'
-Plug 'wakatime/vim-wakatime'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'scrooloose/nerdtree'
-Plug 'ambv/black'
-Plug 'tmhedberg/SimpylFold'
-Plug 'Valloric/YouCompleteMe'
-Plug 'ap/vim-buftabline'
-Plug 'yuttie/comfortable-motion.vim'
-Plug 'chaoren/vim-wordmotion'
+Plug 'junegunn/fzf.vim' " Fuzzy search all the things
+Plug 'morhetz/gruvbox' " Theme
+Plug 'valloric/MatchTagAlways' " show matching parantheses
+Plug 'dense-analysis/ale' " linting + suggestions
+Plug 'wakatime/vim-wakatime' " track time spent within vim
+Plug 'editorconfig/editorconfig-vim' " auto-apply .editorconfig settings
+Plug 'ap/vim-buftabline' " tabs for buffers
+Plug 'chaoren/vim-wordmotion' " better word motions
+Plug 'gorodinskiy/vim-coloresque' " color preview in vim
+Plug 'ervandew/supertab' " use tab for completion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'davidhalter/jedi-vim' " Python completion
+Plug 'deoplete-plugins/deoplete-jedi'
 call plug#end()
-
-let g:gitgutter_map_keys=0
-let g:SimpylFold_fold_docstring=0
-let g:SimpylFold_fold_import=0
-let g:SimpylFold_docstring_preview=1
-let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_autoclose_preview_window_after_insertion=1
-let g:ycm_min_num_of_chars_for_completion=2
-let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow'
 
 colorscheme gruvbox
 set background=dark
@@ -73,6 +81,7 @@ if has("autocmd")
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
   autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
   autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+  autocmd FileType python setlocal completeopt-=preview
 endif
 
 function! StripTrailingWhitespaces()
