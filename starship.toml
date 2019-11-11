@@ -1,0 +1,29 @@
+[username]
+disabled = true
+
+[package]
+disabled = true
+
+[python]
+symbol = ""
+
+[hostname]
+disabled = true
+
+[directory]
+truncate_to_repo = false
+fish_style_pwd_dir_length = 1
+
+[git_branch]
+symbol = ""
+
+[git_status]
+stashed = ""
+conflicted = ""
+deleted = ""
+staged = ""
+modified = ""
+untracked = ""
+prefix = ""
+suffix = " "
+show_sync_count = true
