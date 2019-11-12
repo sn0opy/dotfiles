@@ -16,3 +16,4 @@ histfile
 .zsh/zsh-git-prompt
 .zsh/zsh-autosuggestions
 .zsh/cache
+.zsh/custom.zsh
