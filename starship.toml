@@ -27,3 +27,9 @@ untracked = ""
 prefix = ""
 suffix = " "
 show_sync_count = true
+
+[nodejs]
+disabled = true
+
+[java]
+disabled = true
