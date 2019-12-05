@@ -54,5 +54,3 @@ if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-eval "$(starship init zsh)"
