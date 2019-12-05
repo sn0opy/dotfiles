@@ -1,4 +1,3 @@
-
 set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8
@@ -59,6 +58,7 @@ Plug 'ervandew/supertab' " use tab for completion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'davidhalter/jedi-vim' " Python completion
 Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " go compatibility
 call plug#end()
 
 colorscheme gruvbox
@@ -92,3 +92,20 @@ function! StripTrailingWhitespaces()
   let @/=_s
   call cursor(l, c)
 endfunction
+
+
+" go specific settings
+au FileType go set noexpandtab
+au FileType go set shiftwidth=2
+au FileType go set softtabstop=2
+au FileType go set tabstop=2
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_auto_sameids = 1
+let g:go_fmt_command = "goimports"

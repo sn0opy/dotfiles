@@ -21,5 +21,6 @@ if [[ "$OSTYPE" == linux* ]]; then
 		clear #for background artifacting
 	fi
 
+  export GOPATH=$HOME/go
 fi
 
