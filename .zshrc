@@ -48,9 +48,15 @@ export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 export FZF_DEFAULT_OPTS='--color 16'
 
-if [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-  ZSH_AUTOSUGGEST_USE_ASYNC=1
-fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.zplug/init.zsh ] && source ~/.zplug/init.zsh
+
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "zsh-users/zsh-autosuggestions", defer:3
+zplug "zsh-users/zsh-syntax-highlighting", defer:3
+zplug "zsh-users/zsh-completions", use:src
+zplug load
+
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
+unset VIRTUAL_ENV_DISABLE_PROMPT
