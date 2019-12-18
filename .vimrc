@@ -64,6 +64,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'davidhalter/jedi-vim' " Python completion
 Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " go compatibility
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 call plug#end()
 
 colorscheme gruvbox
