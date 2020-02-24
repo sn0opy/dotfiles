@@ -1,25 +1,25 @@
 [user]
-	name = Sascha Ohms
-	email = sasch9r@gmail.com
-	signingkey = CC962DD6CF9E5226
+  name = Sascha Ohms
+  email = sasch9r@gmail.com
+  signingkey = CC962DD6CF9E5226
 
 [core]
-	editor = vim
-	pager = less -r
+  editor = vim
+  pager = less -r
 
 [commit]
-	gpgsign = true
+  gpgsign = true
 
 [push]
-	default = simple
+  default = simple
 
 [format]
-	pretty = format:%h %Cblue%<(12,trunc)%ar%Creset %<(15,trunc)%an %Cgreen%s%Creset
+  pretty = format:%h %Cblue%<(12,trunc)%ar%Creset %<(15,trunc)%an %Cgreen%s%Creset
 
 [alias]
-	l = log -n 15 --pretty=format:'%h %Cred%G?%Creset %Cblue%<(12,trunc)%ar%Creset %<(15,trunc)%an %Cgreen%s%Creset'
-	co = checkout
-	s = status
-	pr = pull --rebase
-	pull = pr
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  l = log -n 15 --pretty=format:'%h %Cred%G?%Creset %Cblue%<(12,trunc)%ar%Creset %<(15,trunc)%an %Cgreen%s%Creset'
+  co = checkout
+  s = status
+  pr = pull --rebase
+  pull = pr
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
