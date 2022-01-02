@@ -23,3 +23,12 @@
   pr = pull --rebase
   pull = pr
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+
+[gpg]
+  program = gpg
+
+[pull]
+  rebase = false
+
+[init]
+  defaultBranch = main

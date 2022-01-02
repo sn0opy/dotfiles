@@ -42,6 +42,7 @@ done
 
 # general options
 export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+export GPG_TTY=$(tty)
 
 # fzf options
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
@@ -49,7 +50,7 @@ export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap 
 export FZF_DEFAULT_OPTS='--color 16'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.zplug/init.zsh ] && source ~/.zplug/init.zsh
+[ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
 
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
