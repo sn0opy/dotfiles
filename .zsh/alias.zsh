@@ -5,7 +5,7 @@ alias vim="nvim"
 alias ta='tmux attach'
 alias g='git '
 
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias l='ls -l'
 alias ll='l'
 alias lt='ls -tr'

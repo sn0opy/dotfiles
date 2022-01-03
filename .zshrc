@@ -1,6 +1,6 @@
 autoload -Uz compinit promptinit colors select-word-style bracketed-paste-magic url-quote-magic zmv
 zle -N bracketed-paste bracketed-paste-magic
-zle -N self-insert url-quote-magic 
+zle -N self-insert url-quote-magic
 select-word-style bash
 compinit -i
 promptinit
@@ -52,7 +52,7 @@ export FZF_DEFAULT_OPTS='--color 16'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
 
-zplug "mafredri/zsh-async", from:github
+zplug "mafredri/zsh-async", from:github, use:"async.zsh"
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "zsh-users/zsh-autosuggestions", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
