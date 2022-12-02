@@ -1,8 +1,3 @@
-[user]
-  name = Sascha Ohms
-  email = sasch9r@gmail.com
-  signingkey = CC962DD6CF9E5226
-
 [core]
   editor = vim
   pager = less -r
@@ -23,12 +18,26 @@
   pr = pull --rebase
   pull = pr
   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+  quickserve = daemon --verbose --export-all --base-path=.git --reuseaddr --strict-paths .git/
 
 [gpg]
-  program = gpg
+  format = ssh
+
+[gpg "ssh"]
+  program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+  allowedSignersFile = /Users/sascha/.config/git/allowed_signers
 
 [pull]
   rebase = false
 
 [init]
   defaultBranch = main
+
+[credential]
+  helper = store
+
+[includeIf "gitdir:~/projects/"]
+  path = ~/.gitconfig-personal
+
+[includeIf "gitdir:~/projects/work/"]
+  path = ~/.gitconfig-work
