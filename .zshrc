@@ -51,8 +51,10 @@ export FZF_DEFAULT_OPTS='--color 16'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
+[ -f ~/.custom.zsh ] && source ~/.custom.zsh
 
-zplug "mafredri/zsh-async", from:github, use:"async.zsh"
+
+zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "zsh-users/zsh-autosuggestions", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3

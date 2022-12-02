@@ -43,7 +43,7 @@ let g:ale_completion_enabled = 0
 let mapleader = ','
 
 if has('macunix')
-  let g:python3_host_prog = '/usr/bin/python3'
+  let g:python3_host_prog = '/opt/homebrew/bin/python3'
 else
   let g:python3_host_prog = '/usr/bin/python'
 endif
