@@ -11,9 +11,7 @@ Icon
 ._*
 .Spotlight-V100
 .Trashes
-histfile
-.vim/bundle/*
-.zsh/zsh-git-prompt
-.zsh/zsh-autosuggestions
-.zsh/cache
-.zsh/custom.zsh
+zsh/zsh-git-prompt
+zsh/zsh-autosuggestions
+zsh/cache
+zsh/custom.zsh
