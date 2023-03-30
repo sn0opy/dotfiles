@@ -35,7 +35,7 @@ endif
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()} }
 Plug 'junegunn/fzf.vim'
-Plug 'morhetz/gruvbox' " Theme
+Plug 'luisiacc/gruvbox-baby', {'branch': 'main'}
 Plug 'airblade/vim-gitgutter' " Git status indicator
 Plug 'dense-analysis/ale' " linting + suggestions
 Plug 'wakatime/vim-wakatime' " track time spent within vim
@@ -47,9 +47,10 @@ Plug 'ervandew/supertab' " use tab for completion
 Plug 'davidhalter/jedi-vim' " Python completion
 Plug 'tpope/vim-fugitive' " git wrapper
 Plug 'itchyny/lightline.vim' " status bar
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Treesitter
 call plug#end()
 
-colorscheme gruvbox
+colorscheme gruvbox-baby
 
 filetype plugin on
 
@@ -76,3 +77,11 @@ function! StripTrailingWhitespaces()
   call cursor(l, c)
 endfunction
 
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
