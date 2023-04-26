@@ -63,3 +63,4 @@ zplug "ohmyzsh/ohmyzsh", use:"lib/{spectrum,git}.zsh"
 zplug load
 
 unset VIRTUAL_ENV_DISABLE_PROMPT
+eval "$(atuin init zsh)"
