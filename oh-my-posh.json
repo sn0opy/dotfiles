@@ -80,6 +80,12 @@
       "newline": true,
       "segments": [
         {
+          "type": "root",
+          "style": "plain",
+          "foreground": "#ffff66",
+          "template": "  "
+        },
+        {
           "foreground": "#B48EAD",
           "foreground_templates": [
             "{{ if gt .Code 0 }}#BF616A{{ end }}"
