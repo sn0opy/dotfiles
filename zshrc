@@ -6,25 +6,12 @@ compinit -i
 promptinit
 colors
 
-# history
-setopt hist_ignore_space
-setopt append_history
-setopt hist_ignore_dups
-setopt hist_save_no_dups
-setopt hist_reduce_blanks
-setopt share_history
-setopt hist_ignore_all_dups
-setopt extendedglob
-
-export HISTFILE=~/.zsh_history
-export HISTSIZE=10000
-export SAVEHIST=500000
-REPORTTIME=10
-
-# env vars
+export REPORTTIME=10
 export EDITOR=vim
 export VISUAL=vim
 export PAGER=less
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+export GPG_TTY=$(tty)
 
 # colorful $PAGER
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -39,10 +26,6 @@ for file in ~/.zsh/*.zsh; do
     source $file
 done
 
-# general options
-export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
-export GPG_TTY=$(tty)
-
 # fzf options
 export FZF_DEFAULT_COMMAND="rg --files --hidden"
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
@@ -53,14 +36,14 @@ export FZF_DEFAULT_OPTS='--color 16'
 [ -f ~/.custom.zsh ] && source ~/.custom.zsh
 
 zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "zsh-users/zsh-autosuggestions", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:3
 zplug "zsh-users/zsh-completions", use:src
-zplug "supercrabtree/k"
-zplug "peterhurford/up.zsh"
 zplug "ohmyzsh/ohmyzsh", use:"lib/{spectrum,git}.zsh"
 zplug load
 
 unset VIRTUAL_ENV_DISABLE_PROMPT
+
 eval "$(atuin init zsh)"
+eval "$(oh-my-posh init zsh --config $HOME/.oh-my-posh.json)"
+

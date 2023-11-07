@@ -36,7 +36,7 @@
   helper = store
 
 [include]
-  path = ~/.gitconfig.custom
+  path = ~/.gitconfig-local
 
 [includeIf "gitdir:~/.dotfiles/"]
   path = ~/.gitconfig-personal

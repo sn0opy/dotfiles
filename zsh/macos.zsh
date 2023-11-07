@@ -7,6 +7,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
   export PATH=$HOME/go/bin:$PATH
   export PATH=$HOME/.fastlane/bin:$PATH
+  export PATH=$HOME/.rd/bin:$PATH
   export PATH=/usr/local/opt/ruby/bin:$PATH
   export ZPLUG_HOME=/opt/homebrew/opt/zplug
 
@@ -25,4 +26,5 @@ if [[ "$OSTYPE" == darwin* ]]; then
   if [ $commands[kubectl] ]; then
     source <(kubectl completion zsh)
   fi
+
 fi
