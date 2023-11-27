@@ -5,6 +5,11 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "os",
+          "style": "plain",
+          "template": "{{.Icon}} "
+        },
+        {
           "type": "session",
           "foreground": "#ffffff",
           "template": "{{ if .SSHSession }}\uf489 {{ end }}"
