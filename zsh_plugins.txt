@@ -1,0 +1,3 @@
+mroth/evalcache
+zsh-users/zsh-autosuggestions
+marlonrichert/zsh-autocomplete
