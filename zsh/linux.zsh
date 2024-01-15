@@ -1,4 +1,6 @@
 if [[ "$OSTYPE" == linux* ]]; then
+  source '/usr/share/zsh-antidote/antidote.zsh'
+
   # some better colors for ls
   if [[ -x `which dircolors` ]] ; then
     eval "`dircolors ~/.dircolors`"
@@ -10,10 +12,9 @@ if [[ "$OSTYPE" == linux* ]]; then
   # colors in framebuffer
   if [[ $TERM = "linux" ]]; then
     ${HOME}/bin/parse_xdefaults.sh
-    clear #for background artifacting
+    clear
   fi
 
   export GOPATH=$HOME/go
-  export ZPLUG_HOME=$HOME/.zplug
 fi
 
