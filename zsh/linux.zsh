@@ -6,9 +6,6 @@ if [[ "$OSTYPE" == linux* ]]; then
     eval "`dircolors ~/.dircolors`"
   fi
 
-  zle-line-init () { echo -n "$bellchar" }
-  zle -N zle-line-init
-
   # colors in framebuffer
   if [[ $TERM = "linux" ]]; then
     ${HOME}/bin/parse_xdefaults.sh

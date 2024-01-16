@@ -1,11 +1,12 @@
+zmodload zsh/zprof
 autoload -Uz compinit colors select-word-style bracketed-paste-magic url-quote-magic
 zle -N bracketed-paste bracketed-paste-magic
 zle -N self-insert url-quote-magic
 select-word-style bash
-compinit -i
 colors
+compinit 
 
-# zstyle ':completion:*' menu select
+zstyle ':completion:*' menu select
 
 export CLICOLOR=1
 export REPORTTIME=10
