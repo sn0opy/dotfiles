@@ -25,8 +25,6 @@ for file in $HOME/.zsh/*.zsh; do
     source $file
 done
 
-[ -f $HOME/.custom.zsh ] && source ~/.custom.zsh
-
 antidote load
 
 _evalcache atuin init zsh
