@@ -28,5 +28,5 @@ done
 antidote load
 
 _evalcache atuin init zsh
-_evalcache oh-my-posh init zsh --config $HOME/.oh-my-posh.json
+_evalcache starship init zsh
 

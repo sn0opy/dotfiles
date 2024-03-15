@@ -1,26 +1,56 @@
-[username]
-disabled = true
+format= """
+$hostname\
+$os\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$python\
+$line_break\
+$custom\
+$jobs\
+$container\
+$shell\
+$character"""
 
 [hostname]
-disabled = true
+ssh_only = true
+ssh_symbol = " "
+format = "$ssh_symbol"
+disabled = false
 
 [directory]
+style = "bold blue"
 truncate_to_repo = false
 fish_style_pwd_dir_length = 1
 
 [git_status]
-stashed = ""
-conflicted = ""
-deleted = ""
-staged = ""
-modified = ""
-untracked = ""
+modified = "!${count}"
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
 
-[package]
-disabled = true
+[git_branch]
+symbol = " "
+format = "[$symbol$branch(:$remote_branch)]($style) "
 
-[nodejs]
-disabled = true
+[os]
+disabled = false
 
-[java]
-disabled = true
+[os.symbols]
+Arch = "󰣇 "
+Windows = " "
+Macos = " "
+
+[custom.root]
+when = 'test "$USER" = "root"'
+style = "bold yellow"
+format = "[󱐋 ]($style)"
+
+[python]
+detect_files = []
+symbol = " "
+format = '[${symbol}${pyenv_prefix}(${version} )]($style)'
+

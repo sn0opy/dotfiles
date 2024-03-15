@@ -11,7 +11,4 @@ Icon
 ._*
 .Spotlight-V100
 .Trashes
-zsh/zsh-git-prompt
-zsh/zsh-autosuggestions
 zsh/cache
-zsh/custom.zsh
