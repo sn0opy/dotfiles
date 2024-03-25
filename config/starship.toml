@@ -48,6 +48,7 @@ Macos = " "
 when = 'test "$USER" = "root"'
 style = "bold yellow"
 format = "[󱐋 ]($style)"
+os = "unix"
 
 [python]
 detect_files = []
