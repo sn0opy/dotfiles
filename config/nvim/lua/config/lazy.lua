@@ -18,17 +18,13 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
+    { import = "plugins" },
   },
   defaults = {
     lazy = false,
     version = false, -- always use the latest git commit
   },
-  install = {
-    colorscheme = {
-      "tokyonight",
-      "habamax",
-    },
-  },
+  install = {},
   checker = {
     enabled = true,
   },
